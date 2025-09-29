@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Convertisseur d'images en JPG</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="converter-container">
+      <header>
+        <h1>Convertisseur d'images en JPG</h1>
+        <!-- Texte mis à jour pour inclure HEIC -->
+        <p>
+          Sélectionnez une ou plusieurs images (PNG, GIF, WEBP, HEIC, etc.) pour
+          les convertir en JPG de haute qualité, directement dans votre
+          navigateur.
+        </p>
+      </header>
+
+      <main>
+        <div class="upload-area">
+          <!-- Attribut 'accept' mis à jour -->
+          <input
+            type="file"
+            id="imageInput"
+            accept="image/*,.heic,.heif"
+            multiple
+          />
+          <label for="imageInput" class="upload-label">
+            <span>Cliquez ici pour choisir vos fichiers</span>
+            <small>Ou glissez-déposez les images</small>
+          </label>
+        </div>
+
+        <button id="convertBtn">Convertir et Télécharger</button>
+
+        <div id="status"></div>
+        <div id="preview-container"></div>
+      </main>
+
+      <footer>
+        <p>
+          Projet open-source hébergé sur
+          <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+          Aucune image n'est envoyée sur un serveur.
+        </p>
+      </footer>
+    </div>
+
+    <!-- Librairie pour créer des fichiers ZIP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+    <!-- NOUVEAU : Librairie pour décoder les fichiers HEIC -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/heic2any/0.0.4/heic2any.min.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>

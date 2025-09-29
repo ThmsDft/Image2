@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #007bff;
+  --background-color: #f4f7fc;
+  --card-background: #ffffff;
+  --text-color: #333;
+  --light-gray: #e9ecef;
+  --success-color: #28a745;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.converter-container {
+  background-color: var(--card-background);
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2em;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+header p {
+  color: #6c757d;
+  margin-bottom: 30px;
+}
+
+/* Cache l'input de fichier par défaut */
+#imageInput {
+  display: none;
+}
+
+.upload-label {
+  display: block;
+  border: 2px dashed var(--light-gray);
+  border-radius: 8px;
+  padding: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.upload-label:hover,
+.upload-label.dragover {
+  background-color: #f8f9fa;
+  border-color: var(--primary-color);
+}
+
+.upload-label span {
+  font-size: 1.2em;
+  font-weight: 500;
+  color: var(--primary-color);
+  display: block;
+}
+
+.upload-label small {
+  color: #6c757d;
+}
+
+#convertBtn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 15px 30px;
+  font-size: 1.1em;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#convertBtn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+#convertBtn:disabled {
+  background-color: #a0c7ef;
+  cursor: not-allowed;
+}
+
+#status {
+  margin-top: 20px;
+  font-style: italic;
+  color: #555;
+}
+
+footer {
+  margin-top: 30px;
+  font-size: 0.9em;
+  color: #aaa;
+}
+
+footer a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
